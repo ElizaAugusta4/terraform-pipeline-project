@@ -5,6 +5,12 @@ terraform {
       version = "5.49.0"
     }
   }
+  backend "s3" {
+    bucket         = "terraform-iac-versionnn"
+    key            = "terraform.tfstate"
+    region         = "us-east-2"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
