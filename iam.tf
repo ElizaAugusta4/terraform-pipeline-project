@@ -26,7 +26,7 @@ resource "aws_iam_role" "tf-role" {
         Condition = {
           StringEquals = {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
-            "token.actions.githubusercontent.com:sub" = "repo:ElizaAugusta4/Project-Terraform-CICD:ref:refs/heads/main"
+            "token.actions.githubusercontent.com:sub" = "repo:ElizaAugusta4/terraform-pipeline-project:ref:refs/heads/master"
           }
         }
       }
